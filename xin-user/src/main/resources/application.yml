@@ -1,0 +1,26 @@
+master:
+  datasource:
+#   数据源基本配置
+    username: taibai
+    password: aq1sw2de
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.94.158.155:3306/gmall_study?characterEncoding=UTF-8
+    type: com.alibaba.druid.pool.DruidDataSource
+#   数据源其他配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+mapper:
+  i-d-e-n-t-i-t-y: MYSQL
+
+logging:
+  level:
+    com.tjx.xinuser.mapper: debug
